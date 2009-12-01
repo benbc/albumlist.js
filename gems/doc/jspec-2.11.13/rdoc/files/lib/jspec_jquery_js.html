@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: jspec.jquery.js</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>jspec.jquery.js</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>lib/jspec.jquery.js
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Tue Dec 01 20:40:04 +0000 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+// JSpec - jQuery - Copyright TJ Holowaychuk &lt;tj@vision-media.ca&gt;
+(MIT Licensed)
+</p>
+<p>
+JSpec .requires(&#8216;jQuery&#8217;, &#8216;when using
+jspec.jquery.js&#8217;) .include({
+</p>
+<pre>
+  name: 'jQuery',
+
+  // --- Initialize
+
+  init : function() {
+    jQuery.ajaxSetup({ async: false })
+  },
+
+  // --- Utilities
+
+  utilities : {
+    element:  jQuery,
+    elements: jQuery,
+    sandbox : function() {
+      return jQuery('&lt;div class=&quot;sandbox&quot;&gt;&lt;/div&gt;')
+    }
+  },
+
+  // --- Matchers
+
+  matchers : {
+    have_tag      : &quot;jQuery(expected, actual).length == 1&quot;,
+    have_one      : &quot;alias have_tag&quot;,
+    have_tags     : &quot;jQuery(expected, actual).length &gt; 1&quot;,
+    have_many     : &quot;alias have_tags&quot;,
+    have_child    : &quot;jQuery(actual).children(expected).length == 1&quot;,
+    have_children : &quot;jQuery(actual).children(expected).length &gt; 1&quot;,
+    have_text     : &quot;jQuery(actual).text() == expected&quot;,
+    have_value    : &quot;jQuery(actual).val() == expected&quot;,
+    be_enabled    : &quot;!jQuery(actual).attr('disabled')&quot;,
+    have_class    : &quot;jQuery(actual).hasClass(expected)&quot;,
+
+    be_visible : function(actual) {
+      return jQuery(actual).css('display') != 'none' &amp;&amp;
+             jQuery(actual).css('visibility') != 'hidden' &amp;&amp;
+             jQuery(actual).attr('type') != 'hidden'
+    },
+
+    be_hidden : function(actual) {
+      return !JSpec.does(actual, 'be_visible')
+    },
+
+    have_classes : function(actual) {
+      return !JSpec.any(JSpec.argumentsToArray(arguments, 1), function(arg){
+        return !JSpec.does(actual, 'have_class', arg)
+      })
+    },
+
+    have_attr : function(actual, attr, value) {
+      return value ? jQuery(actual).attr(attr) == value:
+                     jQuery(actual).attr(attr)
+    },
+
+    'be disabled selected checked' : function(attr) {
+      return 'jQuery(actual).attr(&quot;' + attr + '&quot;)'
+    },
+
+    'have type id title alt href src sel rev name target' : function(attr) {
+      return function(actual, value) {
+        return JSpec.does(actual, 'have_attr', attr, value)
+      }
+    }
+  }
+</pre>
+<p>
+})
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

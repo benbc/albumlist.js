@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Formatted progress bar.
+full_name: Commander::UI::ProgressBar#progress_bar
+is_singleton: false
+name: progress_bar
+params: ()
+visibility: public

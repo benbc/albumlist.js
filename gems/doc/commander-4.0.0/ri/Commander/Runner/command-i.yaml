@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: add_command(Commander::Command.new(name)) if block
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates and yields a command instance when a block is passed. Otherwise attempts to return the command, raising InvalidCommandError when it does not exist.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  command :my_command do |c|\n    c.when_called do |args|\n      # Code\n    end\n  end\n"
+full_name: Commander::Runner#command
+is_singleton: false
+name: command
+params: (name, &block) {|add_command(Commander::Command.new(name)) if block| ...}
+visibility: public

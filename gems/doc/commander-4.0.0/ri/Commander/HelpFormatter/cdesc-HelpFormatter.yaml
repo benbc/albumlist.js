@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::H 
+  level: 1
+  text: Help Formatter
+- !ruby/struct:SM::Flow::P 
+  body: Commander's help formatters control the output when either the help command, or --help switch are called. The default formatter is Commander::HelpFormatter::Terminal.
+constants: []
+
+full_name: Commander::HelpFormatter
+includes: []
+
+instance_methods: []
+
+name: HelpFormatter
+superclass: 

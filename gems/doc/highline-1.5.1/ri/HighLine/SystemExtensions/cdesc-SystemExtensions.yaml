@@ -1,0 +1,95 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CHARACTER_MODE
+  value: "\"Win32API\""
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: win32 console APIs
+  name: STD_INPUT_HANDLE
+  value: "-10"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: STD_OUTPUT_HANDLE
+  value: "-11"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: STD_ERROR_HANDLE
+  value: "-12"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_PROCESSED_INPUT
+  value: "0x0001"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_LINE_INPUT
+  value: "0x0002"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_WRAP_AT_EOL_OUTPUT
+  value: "0x0002"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_ECHO_INPUT
+  value: "0x0004"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_WINDOW_INPUT
+  value: "0x0008"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_MOUSE_INPUT
+  value: "0x0010"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_INSERT_MODE
+  value: "0x0020"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ENABLE_QUICK_EDIT_MODE
+  value: "0x0040"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CHARACTER_MODE
+  value: "\"termios\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CHARACTER_MODE
+  value: "\"stty\""
+full_name: HighLine::SystemExtensions
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: GetConsoleMode
+- !ruby/object:RI::MethodSummary 
+  name: GetConsoleScreenBufferInfo
+- !ruby/object:RI::MethodSummary 
+  name: GetStdHandle
+- !ruby/object:RI::MethodSummary 
+  name: SetConsoleEcho
+- !ruby/object:RI::MethodSummary 
+  name: SetConsoleMode
+- !ruby/object:RI::MethodSummary 
+  name: get_character
+- !ruby/object:RI::MethodSummary 
+  name: get_character
+- !ruby/object:RI::MethodSummary 
+  name: get_character
+- !ruby/object:RI::MethodSummary 
+  name: raw_no_echo_mode
+- !ruby/object:RI::MethodSummary 
+  name: restore_mode
+- !ruby/object:RI::MethodSummary 
+  name: terminal_size
+- !ruby/object:RI::MethodSummary 
+  name: terminal_size
+name: SystemExtensions
+superclass: 

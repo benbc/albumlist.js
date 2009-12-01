@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Add a usage example for this command.
+- !ruby/struct:SM::Flow::P 
+  body: Usage examples are later displayed in help documentation created by the help formatters.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  command :something do |c|\n    c.example &quot;Should do something&quot;, &quot;my_command something&quot;\n  end\n"
+full_name: Commander::Command#example
+is_singleton: false
+name: example
+params: (description, command)
+visibility: public

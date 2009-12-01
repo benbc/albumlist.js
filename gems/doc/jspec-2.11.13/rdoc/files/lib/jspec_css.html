@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: jspec.css</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>jspec.css</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>lib/jspec.css
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Tue Dec 01 20:40:04 +0000 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+body.jspec {
+</p>
+<pre>
+  margin: 45px 0;
+  font: 12px &quot;Helvetica Neue Light&quot;, &quot;Lucida Grande&quot;, &quot;Calibri&quot;, &quot;Arial&quot;, sans-serif;
+  background: #efefef url(images/bg.png) top left repeat-x;
+  text-align: center;
+</pre>
+<p>
+} jspec {
+</p>
+<pre>
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 1008px;
+  background: url(images/vr.png) top left repeat-y;
+  text-align: left;
+</pre>
+<p>
+} jspec-top {
+</p>
+<pre>
+  position: relative;
+  margin: 0 auto;
+  width: 1008px;
+  height: 40px;
+  background: url(images/sprites.bg.png) top left no-repeat;
+</pre>
+<p>
+} jspec-bottom {
+</p>
+<pre>
+  margin: 0 auto;
+  width: 1008px;
+  height: 15px;
+  background: url(images/sprites.bg.png) bottom left no-repeat;
+</pre>
+<p>
+} jspec .loading {
+</p>
+<pre>
+  margin-top: -45px;
+  width: 1008px;
+  height: 80px;
+  background: url(images/loading.gif) 50% 50% no-repeat;
+</pre>
+<p>
+} jspec-title {
+</p>
+<pre>
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 160px;
+  font-size: 22px;
+  font-weight: normal;
+  background: url(images/sprites.png) 0 -126px no-repeat;
+  text-align: center;
+</pre>
+<p>
+} jspec-title em {
+</p>
+<pre>
+  font-size: 10px;
+  font-style: normal;
+  color: #BCC8D1;
+</pre>
+<p>
+} jspec-report * {
+</p>
+<pre>
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+</pre>
+<p>
+} jspec-report {
+</p>
+<pre>
+  padding: 15px 40px;
+        font: 11px &quot;Helvetica Neue Light&quot;, &quot;Lucida Grande&quot;, &quot;Calibri&quot;, &quot;Arial&quot;, sans-serif;
+        color: #7B8D9B;
+</pre>
+<p>
+} jspec-report.has-failures {
+</p>
+<pre>
+  padding-bottom: 30px;
+</pre>
+<p>
+} jspec-report .hidden {
+</p>
+<pre>
+  display: none;
+</pre>
+<p>
+} jspec-report .heading {
+</p>
+<pre>
+  margin-bottom: 15px;
+</pre>
+<p>
+} jspec-report .heading span {
+</p>
+<pre>
+  padding-right: 10px;
+</pre>
+<p>
+} jspec-report .heading .passes em {
+</p>
+<pre>
+  color: #0ea0eb;
+</pre>
+<p>
+} jspec-report .heading .failures em {
+</p>
+<pre>
+  color: #FA1616;
+</pre>
+<p>
+} jspec-report table {
+</p>
+<pre>
+  font-size: 11px;
+  border-collapse: collapse;
+</pre>
+<p>
+} jspec-report td {
+</p>
+<pre>
+  padding: 8px;
+  text-indent: 30px;
+  color: #7B8D9B;
+</pre>
+<p>
+} jspec-report tr.body {
+</p>
+<pre>
+  display: none;
+</pre>
+<p>
+} jspec-report tr.body pre {
+</p>
+<pre>
+  margin: 0;
+  padding: 0 0 5px 25px;
+</pre>
+<p>
+} jspec-report tr.even:hover + tr.body, jspec-report tr.odd:hover + tr.body
+{
+</p>
+<pre>
+  display: block;
+</pre>
+<p>
+} jspec-report tr td:first-child em {
+</p>
+<pre>
+        display: block;
+        clear: both;
+  font-style: normal;
+  font-weight: normal;
+  color: #7B8D9B;
+</pre>
+<p>
+} jspec-report tr.even:hover, jspec-report tr.odd:hover {
+</p>
+<pre>
+  text-shadow: 1px 1px 1px #fff;
+  background: #F2F5F7;
+</pre>
+<p>
+} jspec-report td + td {
+</p>
+<pre>
+  padding-right: 0;
+  width: 15px;
+</pre>
+<p>
+} jspec-report td.pass {
+</p>
+<pre>
+  background: url(images/sprites.png) 3px -7px no-repeat;
+</pre>
+<p>
+} jspec-report td.fail {
+</p>
+<pre>
+  background: url(images/sprites.png) 3px -47px no-repeat;
+  font-weight: bold;
+  color: #FC0D0D;
+</pre>
+<p>
+} jspec-report td.requires-implementation {
+</p>
+<pre>
+  background: url(images/sprites.png) 3px -87px no-repeat;
+</pre>
+<p>
+} jspec-report tr.description td {
+</p>
+<pre>
+  margin-top: 25px;
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-indent: 0;
+  color: #1a1a1a;
+</pre>
+<p>
+} jspec-report tr.description:first-child td {
+</p>
+<pre>
+  border-top: none;
+</pre>
+<p>
+} jspec-report .assertion {
+</p>
+<pre>
+  display: block;
+  float: left;
+  margin: 0 0 0 1px;
+  padding: 0;
+  width: 1px;
+  height: 5px;
+  background: #7B8D9B;
+</pre>
+<p>
+} jspec-report .assertion.failed {
+</p>
+<pre>
+  background: red;
+</pre>
+<p>
+} .jspec-sandbox {
+</p>
+<pre>
+  display: none;
+</pre>
+<p>
+}
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

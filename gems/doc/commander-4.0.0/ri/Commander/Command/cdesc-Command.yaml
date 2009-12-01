@@ -1,0 +1,52 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: description
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: examples
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: options
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: proxy_options
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: summary
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: syntax
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Commander::Command
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: action
+- !ruby/object:RI::MethodSummary 
+  name: example
+- !ruby/object:RI::MethodSummary 
+  name: option
+- !ruby/object:RI::MethodSummary 
+  name: run
+- !ruby/object:RI::MethodSummary 
+  name: when_called
+name: Command
+superclass: Object

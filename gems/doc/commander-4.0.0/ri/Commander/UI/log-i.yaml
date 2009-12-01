@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "'Log' an <em>action</em> to the terminal. This is typically used for verbose output regarding actions performed. For example:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  create  path/to/file.rb\n  remove  path/to/old_file.rb\n  remove  path/to/old_file2.rb\n"
+full_name: Commander::UI#log
+is_singleton: false
+name: log
+params: (action, *args)
+visibility: public

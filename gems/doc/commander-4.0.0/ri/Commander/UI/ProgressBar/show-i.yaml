@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Output the progress bar.
+full_name: Commander::UI::ProgressBar#show
+is_singleton: false
+name: show
+params: ()
+visibility: public

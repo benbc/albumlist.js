@@ -1,0 +1,66 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::H 
+  level: 1
+  text: User Interaction
+- !ruby/struct:SM::Flow::P 
+  body: "Commander's user interaction module mixes in common methods which extend HighLine's functionality such as a #password method rather than calling #ask directly."
+constants: []
+
+full_name: Commander::UI
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Growl
+- !ruby/object:RI::IncludedModule 
+  name: Growl
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: applescript
+- !ruby/object:RI::MethodSummary 
+  name: applescript
+- !ruby/object:RI::MethodSummary 
+  name: ask_editor
+- !ruby/object:RI::MethodSummary 
+  name: ask_editor
+- !ruby/object:RI::MethodSummary 
+  name: choose
+- !ruby/object:RI::MethodSummary 
+  name: choose
+- !ruby/object:RI::MethodSummary 
+  name: converse
+- !ruby/object:RI::MethodSummary 
+  name: converse
+- !ruby/object:RI::MethodSummary 
+  name: enable_paging
+- !ruby/object:RI::MethodSummary 
+  name: enable_paging
+- !ruby/object:RI::MethodSummary 
+  name: io
+- !ruby/object:RI::MethodSummary 
+  name: io
+- !ruby/object:RI::MethodSummary 
+  name: log
+- !ruby/object:RI::MethodSummary 
+  name: log
+- !ruby/object:RI::MethodSummary 
+  name: password
+- !ruby/object:RI::MethodSummary 
+  name: password
+- !ruby/object:RI::MethodSummary 
+  name: progress
+- !ruby/object:RI::MethodSummary 
+  name: progress
+- !ruby/object:RI::MethodSummary 
+  name: reset_io
+- !ruby/object:RI::MethodSummary 
+  name: reset_io
+- !ruby/object:RI::MethodSummary 
+  name: speak
+- !ruby/object:RI::MethodSummary 
+  name: speak
+name: UI
+superclass: 

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Default command <em>name</em> to be used when no other command is found in the arguments.
+full_name: Commander::Runner#default_command
+is_singleton: false
+name: default_command
+params: (name)
+visibility: public

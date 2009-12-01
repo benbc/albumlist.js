@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Prompt <em>editor</em> for input. Optionally supply initial <em>input</em> which is written to the editor.
+- !ruby/struct:SM::Flow::P 
+  body: The <em>editor</em> defaults to the EDITOR environment variable when present, or 'mate' for TextMate.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  ask_editor                # =&gt; prompts EDITOR with no input\n  ask_editor('foo')         # =&gt; prompts EDITOR with default text of 'foo'\n  ask_editor('foo', :mate)  # =&gt; prompts TextMate with default text of 'foo'\n"
+full_name: Commander::UI#ask_editor
+is_singleton: false
+name: ask_editor
+params: (input = nil, editor = ENV['EDITOR'] || 'mate')
+visibility: public

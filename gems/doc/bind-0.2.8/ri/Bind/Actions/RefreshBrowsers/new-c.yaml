@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Bind::Actions::RefreshBrowsers::new
+is_singleton: true
+name: new
+params: (uri, *browsers)
+visibility: public

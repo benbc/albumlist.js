@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Whether or not the operation is complete, and we have finished.
+full_name: Commander::UI::ProgressBar#finished?
+is_singleton: false
+name: finished?
+params: ()
+visibility: public

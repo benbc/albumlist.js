@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Alias command <em>name</em> with <em>alias_name</em>. Optionally <em>args</em> may be passed as if they were being passed straight to the original command via the command-line.
+full_name: Commander::Runner#alias_command
+is_singleton: false
+name: alias_command
+params: (alias_name, name, *args)
+visibility: public

@@ -1,0 +1,72 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::H 
+  level: 1
+  text: Progress Bar
+- !ruby/struct:SM::Flow::P 
+  body: "Terminal progress bar utility. In its most basic form requires that the developer specifies when the bar should be incremented. Note that a hash of tokens may be passed to #increment, (or returned when using Object#progress)."
+- !ruby/struct:SM::Flow::VERB 
+  body: "  uris = %w(\n    http://vision-media.ca\n    http://yahoo.com\n    http://google.com\n    )\n\n  bar = Commander::UI::ProgressBar.new uris.length, options\n  threads = []\n  uris.each do |uri|\n    threads &lt;&lt; Thread.new do\n      begin\n        res = open uri\n        bar.increment :uri =&gt; uri\n      rescue Exception =&gt; e\n        bar.increment :uri =&gt; &quot;#{uri} failed&quot;\n      end\n    end\n  end\n  threads.each { |t| t.join }\n"
+- !ruby/struct:SM::Flow::P 
+  body: "The Object method #progress is also available:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  progress uris, :width =&gt; 10 do |uri|\n    res = open uri\n    { :uri =&gt; uri } # Can now use :uri within :format option\n  end\n"
+constants: []
+
+full_name: Commander::UI::ProgressBar
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: completed?
+- !ruby/object:RI::MethodSummary 
+  name: completed?
+- !ruby/object:RI::MethodSummary 
+  name: erase_line
+- !ruby/object:RI::MethodSummary 
+  name: erase_line
+- !ruby/object:RI::MethodSummary 
+  name: finished?
+- !ruby/object:RI::MethodSummary 
+  name: finished?
+- !ruby/object:RI::MethodSummary 
+  name: generate_tokens
+- !ruby/object:RI::MethodSummary 
+  name: generate_tokens
+- !ruby/object:RI::MethodSummary 
+  name: increment
+- !ruby/object:RI::MethodSummary 
+  name: increment
+- !ruby/object:RI::MethodSummary 
+  name: percent_complete
+- !ruby/object:RI::MethodSummary 
+  name: percent_complete
+- !ruby/object:RI::MethodSummary 
+  name: progress_bar
+- !ruby/object:RI::MethodSummary 
+  name: progress_bar
+- !ruby/object:RI::MethodSummary 
+  name: show
+- !ruby/object:RI::MethodSummary 
+  name: show
+- !ruby/object:RI::MethodSummary 
+  name: steps_remaining
+- !ruby/object:RI::MethodSummary 
+  name: steps_remaining
+- !ruby/object:RI::MethodSummary 
+  name: time_elapsed
+- !ruby/object:RI::MethodSummary 
+  name: time_elapsed
+- !ruby/object:RI::MethodSummary 
+  name: time_remaining
+- !ruby/object:RI::MethodSummary 
+  name: time_remaining
+name: ProgressBar
+superclass: Object

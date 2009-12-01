@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Commander::Command::Options#__hash__
+is_singleton: false
+name: __hash__
+params: ()
+visibility: public

@@ -1,0 +1,22 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a new progress bar.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Options
+- !ruby/struct:SM::Flow::VERB 
+  body: "  :title              Title, defaults to &quot;Progress&quot;\n  :width              Width of :progress_bar\n  :progress_str       Progress string, defaults to &quot;=&quot;\n  :incomplete_str     Incomplete bar string, defaults to '.'\n  :format             Defaults to &quot;:title |:progress_bar| :percent_complete% complete &quot;\n  :tokens             Additional tokens replaced within the format string\n  :complete_message   Defaults to &quot;Process complete&quot;\n"
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Tokens
+- !ruby/struct:SM::Flow::VERB 
+  body: "  :title\n  :percent_complete\n  :progress_bar\n  :step\n  :steps_remaining\n  :total_steps\n  :time_elapsed\x03\n  :time_remaining\n"
+full_name: Commander::UI::ProgressBar::new
+is_singleton: true
+name: new
+params: (total, options = {})
+visibility: public

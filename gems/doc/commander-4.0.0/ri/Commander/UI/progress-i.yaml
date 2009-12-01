@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (v)
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Output progress while iterating <em>arr</em>.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  uris = %w( http://vision-media.ca http://google.com )\n  progress uris, :format =&gt; &quot;Remaining: :time_remaining&quot; do |uri|\n    res = open uri\n  end\n"
+full_name: Commander::UI#progress
+is_singleton: false
+name: progress
+params: (arr, options = {}) {|v| ...}
+visibility: public

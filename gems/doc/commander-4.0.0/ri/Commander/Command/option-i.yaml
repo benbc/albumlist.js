@@ -1,0 +1,33 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Add an option.
+- !ruby/struct:SM::Flow::P 
+  body: "Options are parsed via OptionParser so view it for additional usage documentation. A block may optionally be passed to handle the option, otherwise the <em>options</em> struct seen below contains the results of this option. This handles common formats such as:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  -h, --help          options.help           # =&gt; bool\n  --[no-]feature      options.feature        # =&gt; bool\n  --large-switch      options.large_switch   # =&gt; bool\n  --file FILE         options.file           # =&gt; file passed\n  --list WORDS        options.list           # =&gt; array\n  --date [DATE]       options.date           # =&gt; date or nil when optional argument not set\n"
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  command :something do |c|\n    c.option '--recursive', 'Do something recursively'\n    c.option '--file FILE', 'Specify a file'\n    c.option('--info', 'Display info') { puts &quot;handle with block&quot; }\n    c.option '--[no-]feature', 'With or without feature'\n    c.option '--list FILES', Array, 'List the files specified'\n\n    c.when_called do |args, options|\n      do_something_recursively if options.recursive\n      do_something_with_file options.file if options.file\n    end\n  end\n"
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Help Formatters
+- !ruby/struct:SM::Flow::P 
+  body: This method also parses the arguments passed in order to determine which were switches, and which were descriptions for the option which can later be used within help formatters using option[:switches] and option[:description].
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Input Parsing
+- !ruby/struct:SM::Flow::P 
+  body: "Since Commander utilizes OptionParser you can pre-parse and evaluate option arguments. Simply require 'optparse/time', or 'optparse/date', as these objects must respond to #parse."
+- !ruby/struct:SM::Flow::VERB 
+  body: "  c.option '--time TIME', Time\n  c.option '--date [DATE]', Date\n"
+full_name: Commander::Command#option
+is_singleton: false
+name: option
+params: (*args, &block)
+visibility: public

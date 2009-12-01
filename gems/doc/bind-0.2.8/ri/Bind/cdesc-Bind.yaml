@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: VERSION
+  value: "'0.2.8'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: VERSION
+  value: "'0.2.8'"
+full_name: Bind
+includes: []
+
+instance_methods: []
+
+name: Bind
+superclass: 

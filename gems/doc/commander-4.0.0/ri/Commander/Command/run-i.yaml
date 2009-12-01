@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Run the command with <em>args</em>.
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: parses options, call option blocks
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: invokes when_called proc
+  type: :BULLET
+full_name: Commander::Command#run
+is_singleton: false
+name: run
+params: (*args)
+visibility: public

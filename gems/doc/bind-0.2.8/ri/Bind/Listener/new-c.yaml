@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Event listener. Must specify the :paths, and :action options.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: "Options:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  :paths           array of file or directory paths\n  :actions         objects responding to #call, which is used as the callbacks for the event handler\n  :timeout         time in seconds, after which the listener should stop. Defaults to 0, meaning infinity\n  :event           event to bind to, may be one of (:change). Defaults to :change\n  :debug           log verbose debugging information to this stream\n  :interval        sleep interval in seconds. Defaults to 2\n"
+full_name: Bind::Listener::new
+is_singleton: true
+name: new
+params: (options = {})
+visibility: public

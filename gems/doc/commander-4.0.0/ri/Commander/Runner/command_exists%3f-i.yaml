@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Check if a command <em>name</em> exists.
+full_name: Commander::Runner#command_exists?
+is_singleton: false
+name: command_exists?
+params: (name)
+visibility: public

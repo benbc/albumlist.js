@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Completion percentage.
+full_name: Commander::UI::ProgressBar#percent_complete
+is_singleton: false
+name: percent_complete
+params: ()
+visibility: public

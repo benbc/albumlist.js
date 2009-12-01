@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Check if command <em>name</em> is an alias.
+full_name: Commander::Runner#alias?
+is_singleton: false
+name: alias?
+params: (name)
+visibility: public

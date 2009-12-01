@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Erase previous terminal line.
+full_name: Commander::UI::ProgressBar#erase_line
+is_singleton: false
+name: erase_line
+params: ()
+visibility: public

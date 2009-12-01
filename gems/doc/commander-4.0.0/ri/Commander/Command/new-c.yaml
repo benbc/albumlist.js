@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Initialize new command with specified <em>name</em>.
+full_name: Commander::Command::new
+is_singleton: true
+name: new
+params: (name)
+visibility: public

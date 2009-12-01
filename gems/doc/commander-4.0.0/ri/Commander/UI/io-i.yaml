@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Normalize IO streams, allowing for redirection of <tt>input</tt> and/or <tt>output</tt>, for example:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  $ foo              # =&gt; read from terminal I/O\n  $ foo in           # =&gt; read from 'in' file, output to terminal output stream\n  $ foo in out       # =&gt; read from 'in' file, output to 'out' file\n  $ foo &lt; in &gt; out   # =&gt; equivalent to above (essentially)\n"
+- !ruby/struct:SM::Flow::P 
+  body: Optionally a <tt>block</tt> may be supplied, in which case IO will be reset once the block has executed.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  command :foo do |c|\n    c.syntax = 'foo [input] [output]'\n    c.when_called do |args, options|\n      # or io(args.shift, args.shift)\n      io *args\n      str = $stdin.gets\n      puts 'input was: ' + str.inspect\n    end\n  end\n"
+full_name: Commander::UI#io
+is_singleton: false
+name: io
+params: (input = nil, output = nil, &block) {|| ...}
+visibility: public

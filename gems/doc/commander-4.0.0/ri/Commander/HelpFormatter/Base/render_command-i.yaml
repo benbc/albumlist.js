@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Commander::HelpFormatter::Base#render_command
+is_singleton: false
+name: render_command
+params: (command;)
+visibility: public

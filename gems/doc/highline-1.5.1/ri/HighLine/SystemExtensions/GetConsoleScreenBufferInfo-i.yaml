@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: HighLine::SystemExtensions#GetConsoleScreenBufferInfo
+is_singleton: false
+name: GetConsoleScreenBufferInfo
+params: ( console_handle )
+visibility: public

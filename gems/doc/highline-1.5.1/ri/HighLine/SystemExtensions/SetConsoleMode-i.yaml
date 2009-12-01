@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: HighLine::SystemExtensions#SetConsoleMode
+is_singleton: false
+name: SetConsoleMode
+params: ( console_handle, mode )
+visibility: public

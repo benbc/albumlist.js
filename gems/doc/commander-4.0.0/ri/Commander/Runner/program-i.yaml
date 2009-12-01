@@ -1,0 +1,22 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Assign program information.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  # Set data\n  program :name, 'Commander'\n  program :version, Commander::VERSION\n  program :description, 'Commander utility program.'\n  program :help, 'Copyright', '2008 TJ Holowaychuk'\n  program :help, 'Anything', 'You want'\n  program :int_message 'Bye bye!'\n  program :help_formatter, :compact\n  program :help_formatter, Commander::HelpFormatter::TerminalCompact\n\n  # Get data\n  program :name # =&gt; 'Commander'\n"
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Keys
+- !ruby/struct:SM::Flow::VERB 
+  body: "  :version         (required) Program version triple, ex: '0.0.1'\n  :description     (required) Program description\n  :name            Program name, defaults to basename of executable\n  :help_formatter  Defaults to Commander::HelpFormatter::Terminal\n  :help            Allows addition of arbitrary global help blocks\n  :int_message     Message to display when interrupted (CTRL + C)\n"
+full_name: Commander::Runner#program
+is_singleton: false
+name: program
+params: (key, *args)
+visibility: public

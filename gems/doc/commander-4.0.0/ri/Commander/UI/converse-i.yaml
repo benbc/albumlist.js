@@ -1,0 +1,28 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Converse with speech recognition.
+- !ruby/struct:SM::Flow::P 
+  body: Currently a &quot;poorman's&quot; DSL to utilize applescript and the MacOS speech recognition server.
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  case converse 'What is the best food?', :cookies =&gt; 'Cookies', :unknown =&gt; 'Nothing'\n  when :cookies\n    speak 'o.m.g. you are awesome!'\n  else\n    case converse 'That is lame, shall I convince you cookies are the best?', :yes =&gt; 'Ok', :no =&gt; 'No', :maybe =&gt; 'Maybe another time'\n    when :yes\n      speak 'Well you see, cookies are just fantastic.'\n    else\n      speak 'Ok then, bye.'\n    end\n  end\n"
+- !ruby/struct:SM::Flow::H 
+  level: 3
+  text: Notes
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: MacOS only
+  type: :BULLET
+full_name: Commander::UI#converse
+is_singleton: false
+name: converse
+params: (prompt, responses = {})
+visibility: public
