@@ -86,20 +86,20 @@ Methods available to routes, before filters, and views.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000025">attachment</a>&nbsp;&nbsp;
-      <a href="#M000029">back</a>&nbsp;&nbsp;
-      <a href="#M000017">body</a>&nbsp;&nbsp;
-      <a href="#M000024">content_type</a>&nbsp;&nbsp;
-      <a href="#M000019">error</a>&nbsp;&nbsp;
-      <a href="#M000028">etag</a>&nbsp;&nbsp;
-      <a href="#M000021">headers</a>&nbsp;&nbsp;
-      <a href="#M000027">last_modified</a>&nbsp;&nbsp;
-      <a href="#M000023">media_type</a>&nbsp;&nbsp;
-      <a href="#M000020">not_found</a>&nbsp;&nbsp;
-      <a href="#M000018">redirect</a>&nbsp;&nbsp;
-      <a href="#M000026">send_file</a>&nbsp;&nbsp;
-      <a href="#M000022">session</a>&nbsp;&nbsp;
-      <a href="#M000016">status</a>&nbsp;&nbsp;
+      <a href="#M000318">attachment</a>&nbsp;&nbsp;
+      <a href="#M000322">back</a>&nbsp;&nbsp;
+      <a href="#M000310">body</a>&nbsp;&nbsp;
+      <a href="#M000317">content_type</a>&nbsp;&nbsp;
+      <a href="#M000312">error</a>&nbsp;&nbsp;
+      <a href="#M000321">etag</a>&nbsp;&nbsp;
+      <a href="#M000314">headers</a>&nbsp;&nbsp;
+      <a href="#M000320">last_modified</a>&nbsp;&nbsp;
+      <a href="#M000316">media_type</a>&nbsp;&nbsp;
+      <a href="#M000313">not_found</a>&nbsp;&nbsp;
+      <a href="#M000311">redirect</a>&nbsp;&nbsp;
+      <a href="#M000319">send_file</a>&nbsp;&nbsp;
+      <a href="#M000315">session</a>&nbsp;&nbsp;
+      <a href="#M000309">status</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -121,11 +121,11 @@ Methods available to routes, before filters, and views.
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000025" class="method-detail">
-        <a name="M000025"></a>
+      <div id="method-M000318" class="method-detail">
+        <a name="M000318"></a>
 
         <div class="method-heading">
-          <a href="#M000025" class="method-signature">
+          <a href="#M000318" class="method-signature">
           <span class="method-name">attachment</span><span class="method-args">(filename=nil)</span>
           </a>
         </div>
@@ -133,12 +133,12 @@ Methods available to routes, before filters, and views.
         <div class="method-description">
           <p>
 Set the Content-Disposition to &quot;<a
-href="Helpers.html#M000025">attachment</a>&quot; with the specified
+href="Helpers.html#M000318">attachment</a>&quot; with the specified
 filename, instructing the user agents to prompt to save.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000025-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000025-source">
+            onclick="toggleCode('M000318-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000318-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 126</span>
 126:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attachment</span>(<span class="ruby-identifier">filename</span>=<span class="ruby-keyword kw">nil</span>)
@@ -153,24 +153,24 @@ filename, instructing the user agents to prompt to save.
         </div>
       </div>
 
-      <div id="method-M000029" class="method-detail">
-        <a name="M000029"></a>
+      <div id="method-M000322" class="method-detail">
+        <a name="M000322"></a>
 
         <div class="method-heading">
-          <a href="#M000029" class="method-signature">
+          <a href="#M000322" class="method-signature">
           <span class="method-name">back</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Sugar for <a href="Helpers.html#M000018">redirect</a> (example: <a
-href="Helpers.html#M000018">redirect</a> <a
-href="Helpers.html#M000029">back</a>)
+Sugar for <a href="Helpers.html#M000311">redirect</a> (example: <a
+href="Helpers.html#M000311">redirect</a> <a
+href="Helpers.html#M000322">back</a>)
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000029-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000029-source">
+            onclick="toggleCode('M000322-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000322-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 207</span>
 207:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">back</span> ; <span class="ruby-identifier">request</span>.<span class="ruby-identifier">referer</span> ; <span class="ruby-keyword kw">end</span>
@@ -179,24 +179,24 @@ href="Helpers.html#M000029">back</a>)
         </div>
       </div>
 
-      <div id="method-M000017" class="method-detail">
-        <a name="M000017"></a>
+      <div id="method-M000310" class="method-detail">
+        <a name="M000310"></a>
 
         <div class="method-heading">
-          <a href="#M000017" class="method-signature">
+          <a href="#M000310" class="method-signature">
           <span class="method-name">body</span><span class="method-args">(value=nil, &amp;block)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Set or retrieve the response <a href="Helpers.html#M000017">body</a>. When
+Set or retrieve the response <a href="Helpers.html#M000310">body</a>. When
 a block is given, evaluation is deferred until the <a
-href="Helpers.html#M000017">body</a> is read with each.
+href="Helpers.html#M000310">body</a> is read with each.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000017-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000017-source">
+            onclick="toggleCode('M000310-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000310-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 67</span>
 67:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">body</span>(<span class="ruby-identifier">value</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
@@ -212,11 +212,11 @@ href="Helpers.html#M000017">body</a> is read with each.
         </div>
       </div>
 
-      <div id="method-M000024" class="method-detail">
-        <a name="M000024"></a>
+      <div id="method-M000317" class="method-detail">
+        <a name="M000317"></a>
 
         <div class="method-heading">
-          <a href="#M000024" class="method-signature">
+          <a href="#M000317" class="method-signature">
           <span class="method-name">content_type</span><span class="method-args">(type, params={})</span>
           </a>
         </div>
@@ -224,11 +224,11 @@ href="Helpers.html#M000017">body</a> is read with each.
         <div class="method-description">
           <p>
 Set the Content-Type of the response <a
-href="Helpers.html#M000017">body</a> given a media type or file extension.
+href="Helpers.html#M000310">body</a> given a media type or file extension.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000024-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000024-source">
+            onclick="toggleCode('M000317-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000317-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 113</span>
 113:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">content_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">params</span>={})
@@ -246,23 +246,23 @@ href="Helpers.html#M000017">body</a> given a media type or file extension.
         </div>
       </div>
 
-      <div id="method-M000019" class="method-detail">
-        <a name="M000019"></a>
+      <div id="method-M000312" class="method-detail">
+        <a name="M000312"></a>
 
         <div class="method-heading">
-          <a href="#M000019" class="method-signature">
+          <a href="#M000312" class="method-signature">
           <span class="method-name">error</span><span class="method-args">(code, body=nil)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Halt processing and return the <a href="Helpers.html#M000019">error</a> <a
-href="Helpers.html#M000016">status</a> provided.
+Halt processing and return the <a href="Helpers.html#M000312">error</a> <a
+href="Helpers.html#M000309">status</a> provided.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000019-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000019-source">
+            onclick="toggleCode('M000312-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000312-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 84</span>
 84:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error</span>(<span class="ruby-identifier">code</span>, <span class="ruby-identifier">body</span>=<span class="ruby-keyword kw">nil</span>)
@@ -275,11 +275,11 @@ href="Helpers.html#M000016">status</a> provided.
         </div>
       </div>
 
-      <div id="method-M000028" class="method-detail">
-        <a name="M000028"></a>
+      <div id="method-M000321" class="method-detail">
+        <a name="M000321"></a>
 
         <div class="method-heading">
-          <a href="#M000028" class="method-signature">
+          <a href="#M000321" class="method-signature">
           <span class="method-name">etag</span><span class="method-args">(value, kind=:strong)</span>
           </a>
         </div>
@@ -290,18 +290,18 @@ Set the response entity tag (HTTP &#8216;ETag&#8217; header) and halt if
 conditional GET matches. The <tt>value</tt> argument is an identifier that
 uniquely identifies the current version of the resource. The
 <tt>strength</tt> argument indicates whether the <a
-href="Helpers.html#M000028">etag</a> should be used as a :strong (default)
+href="Helpers.html#M000321">etag</a> should be used as a :strong (default)
 or :weak cache validator.
 </p>
 <p>
 When the current request includes an &#8216;If-None-Match&#8217; header
-with a matching <a href="Helpers.html#M000028">etag</a>, execution is
+with a matching <a href="Helpers.html#M000321">etag</a>, execution is
 immediately halted. If the request method is GET or HEAD, a &#8216;304 Not
 Modified&#8217; response is sent.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000028-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000028-source">
+            onclick="toggleCode('M000321-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000321-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 193</span>
 193:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">etag</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">kind</span>=<span class="ruby-identifier">:strong</span>)
@@ -321,22 +321,22 @@ Modified&#8217; response is sent.
         </div>
       </div>
 
-      <div id="method-M000021" class="method-detail">
-        <a name="M000021"></a>
+      <div id="method-M000314" class="method-detail">
+        <a name="M000314"></a>
 
         <div class="method-heading">
-          <a href="#M000021" class="method-signature">
+          <a href="#M000314" class="method-signature">
           <span class="method-name">headers</span><span class="method-args">(hash=nil)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Set multiple response <a href="Helpers.html#M000021">headers</a> with Hash.
+Set multiple response <a href="Helpers.html#M000314">headers</a> with Hash.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000021-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000021-source">
+            onclick="toggleCode('M000314-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000314-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 96</span>
 96:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">headers</span>(<span class="ruby-identifier">hash</span>=<span class="ruby-keyword kw">nil</span>)
@@ -348,11 +348,11 @@ Set multiple response <a href="Helpers.html#M000021">headers</a> with Hash.
         </div>
       </div>
 
-      <div id="method-M000027" class="method-detail">
-        <a name="M000027"></a>
+      <div id="method-M000320" class="method-detail">
+        <a name="M000320"></a>
 
         <div class="method-heading">
-          <a href="#M000027" class="method-signature">
+          <a href="#M000320" class="method-signature">
           <span class="method-name">last_modified</span><span class="method-args">(time)</span>
           </a>
         </div>
@@ -370,8 +370,8 @@ that matches the time specified, execution is immediately halted with a
 &#8216;304 Not Modified&#8217; response.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000027-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000027-source">
+            onclick="toggleCode('M000320-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000320-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 176</span>
 176:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last_modified</span>(<span class="ruby-identifier">time</span>)
@@ -386,11 +386,11 @@ that matches the time specified, execution is immediately halted with a
         </div>
       </div>
 
-      <div id="method-M000023" class="method-detail">
-        <a name="M000023"></a>
+      <div id="method-M000316" class="method-detail">
+        <a name="M000316"></a>
 
         <div class="method-heading">
-          <a href="#M000023" class="method-signature">
+          <a href="#M000316" class="method-signature">
           <span class="method-name">media_type</span><span class="method-args">(type)</span>
           </a>
         </div>
@@ -400,8 +400,8 @@ that matches the time specified, execution is immediately halted with a
 Look up a media type by file extension in Rack&#8216;s mime registry.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000023-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000023-source">
+            onclick="toggleCode('M000316-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000316-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 107</span>
 107:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">media_type</span>(<span class="ruby-identifier">type</span>)
@@ -412,11 +412,11 @@ Look up a media type by file extension in Rack&#8216;s mime registry.
         </div>
       </div>
 
-      <div id="method-M000020" class="method-detail">
-        <a name="M000020"></a>
+      <div id="method-M000313" class="method-detail">
+        <a name="M000313"></a>
 
         <div class="method-heading">
-          <a href="#M000020" class="method-signature">
+          <a href="#M000313" class="method-signature">
           <span class="method-name">not_found</span><span class="method-args">(body=nil)</span>
           </a>
         </div>
@@ -426,8 +426,8 @@ Look up a media type by file extension in Rack&#8216;s mime registry.
 Halt processing and return a 404 Not Found.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000020-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000020-source">
+            onclick="toggleCode('M000313-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000313-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 91</span>
 91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">not_found</span>(<span class="ruby-identifier">body</span>=<span class="ruby-keyword kw">nil</span>)
@@ -438,23 +438,23 @@ Halt processing and return a 404 Not Found.
         </div>
       </div>
 
-      <div id="method-M000018" class="method-detail">
-        <a name="M000018"></a>
+      <div id="method-M000311" class="method-detail">
+        <a name="M000311"></a>
 
         <div class="method-heading">
-          <a href="#M000018" class="method-signature">
+          <a href="#M000311" class="method-signature">
           <span class="method-name">redirect</span><span class="method-args">(uri, *args)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Halt processing and <a href="Helpers.html#M000018">redirect</a> to the URI
+Halt processing and <a href="Helpers.html#M000311">redirect</a> to the URI
 provided.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000018-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000018-source">
+            onclick="toggleCode('M000311-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000311-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 77</span>
 77:     <span class="ruby-keyword kw">def</span>  <span class="ruby-identifier">redirect</span><span class="ruby-identifier">redirect</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
@@ -467,11 +467,11 @@ provided.
         </div>
       </div>
 
-      <div id="method-M000026" class="method-detail">
-        <a name="M000026"></a>
+      <div id="method-M000319" class="method-detail">
+        <a name="M000319"></a>
 
         <div class="method-heading">
-          <a href="#M000026" class="method-signature">
+          <a href="#M000319" class="method-signature">
           <span class="method-name">send_file</span><span class="method-args">(path, opts={})</span>
           </a>
         </div>
@@ -479,11 +479,11 @@ provided.
         <div class="method-description">
           <p>
 Use the contents of the file at <tt>path</tt> as the response <a
-href="Helpers.html#M000017">body</a>.
+href="Helpers.html#M000310">body</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000026-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000026-source">
+            onclick="toggleCode('M000319-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000319-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 135</span>
 135:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_file</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>={})
@@ -512,22 +512,22 @@ href="Helpers.html#M000017">body</a>.
         </div>
       </div>
 
-      <div id="method-M000022" class="method-detail">
-        <a name="M000022"></a>
+      <div id="method-M000315" class="method-detail">
+        <a name="M000315"></a>
 
         <div class="method-heading">
-          <a href="#M000022" class="method-signature">
+          <a href="#M000315" class="method-signature">
           <span class="method-name">session</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Access the underlying Rack <a href="Helpers.html#M000022">session</a>.
+Access the underlying Rack <a href="Helpers.html#M000315">session</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000022-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000022-source">
+            onclick="toggleCode('M000315-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000315-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 102</span>
 102:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">session</span>
@@ -538,23 +538,23 @@ Access the underlying Rack <a href="Helpers.html#M000022">session</a>.
         </div>
       </div>
 
-      <div id="method-M000016" class="method-detail">
-        <a name="M000016"></a>
+      <div id="method-M000309" class="method-detail">
+        <a name="M000309"></a>
 
         <div class="method-heading">
-          <a href="#M000016" class="method-signature">
+          <a href="#M000309" class="method-signature">
           <span class="method-name">status</span><span class="method-args">(value=nil)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Set or retrieve the response <a href="Helpers.html#M000016">status</a>
+Set or retrieve the response <a href="Helpers.html#M000309">status</a>
 code.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000016-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000016-source">
+            onclick="toggleCode('M000309-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000309-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 60</span>
 60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">status</span>(<span class="ruby-identifier">value</span>=<span class="ruby-keyword kw">nil</span>)
