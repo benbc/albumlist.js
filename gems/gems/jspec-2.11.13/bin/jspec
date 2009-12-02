@@ -134,7 +134,7 @@ command :run do |c|
       action = lambda { start_server suite, options }
     else
       suite = args.shift || path_to('spec.dom.html')
-      browsers = browsers_for options.browsers || ['safari']
+      browsers = browsers_for options.browsers || ['firefox']
       action = lambda do
         browsers.each do |browser|
           browser.visit File.expand_path(suite)
