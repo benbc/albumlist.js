@@ -127,7 +127,7 @@ command :run do |c|
     # Actions
     if options.rhino
       suite = args.shift || path_to('spec.rhino.js')
-      action = lambda { exit rhino(suite) }
+      action = lambda { rhino(suite) }
     elsif options.server
       raise 'Cannot use --server with --bind' if options.bind
       suite = args.shift || path_to('spec.server.html')
