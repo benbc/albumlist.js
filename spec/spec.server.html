@@ -6,6 +6,7 @@
 			function runSuites() {
 				JSpec
 				.exec('spec.core.js')
+                                .exec('spec.scenarios.js')
 				.run({ formatter: JSpec.formatters.Server, verbose: true, failuresOnly: true })
 				.report()
 			}
