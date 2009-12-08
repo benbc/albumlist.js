@@ -15,9 +15,12 @@ JSpec.include((function () {
   var sandbox = moduleUtil('jQuery', 'sandbox');
   var mockRequest = moduleUtil('Mock XHR', 'mockRequest');
   var include = matchers.include;
-  var ui = sandbox();
+  var ui;
   return {
     name: 'ScenarioSupport',
+    beforeSpec: function() {
+      ui = sandbox();
+    },
     utilities: {
       server: function() {
         return {
