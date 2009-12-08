@@ -4,9 +4,10 @@ JSpec.describe('End-to-end scenarios', function() {
                   'Black on Both Sides',
                   'Heartattack and Vine'];
     server().has(albums);
-    albumlist.application(sandbox());
+    var s = sandbox();
+    albumlist.application(s);
     albums.forEach(function(album) {
-      user().shouldSee(album);
+      user(s).shouldSee(album);
     });
   });
 });
@@ -21,11 +22,11 @@ JSpec.include({ utilities: {
     };
   },
 
-  user: function() {
+  user: function(ui) {
     var include = matchers.include;
     return {
       shouldSee: function(album) {
-        expect(jQuery('.album').text()).to(include, album);
+        expect(ui.find('.album').text()).to(include, album);
       }
     };
   }
