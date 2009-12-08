@@ -14,7 +14,7 @@ JSpec.describe('End-to-end scenarios', function() {
 JSpec.include({ utilities: {
   server: function() {
     return {
-      hasAlbums: function() {}
+      has: function() {}
     };
   },
 
