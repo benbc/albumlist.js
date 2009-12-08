@@ -4,38 +4,52 @@ JSpec.describe('End-to-end scenarios', function() {
                   'Black on Both Sides',
                   'Heartattack and Vine'];
     server().has(albums);
-    var s = sandbox();
-    albumlist.application(s);
+    runApplication();
     albums.forEach(function(album) {
-      user(s).shouldSee(album);
+      user().shouldSee(album);
     });
   });
 });
 
-JSpec.include({ utilities: {
-  server: function() {
-    var mockRequest = findModule('Mock XHR').utilities.mockRequest;
-    return {
-      has: function(albums) {
-        mockRequest().and_return(JSpec.JSON.encode(albums));
-      }
-    };
-  },
+JSpec.include((function () {
+  var sandbox = moduleUtil('jQuery', 'sandbox');
+  var mockRequest = moduleUtil('Mock XHR', 'mockRequest');
+  var include = matchers.include;
+  var ui = sandbox();
+  return {
+    name: 'ScenarioSupport',
+    utilities: {
+      server: function() {
+        return {
+          has: function(albums) {
+            mockRequest().and_return(JSpec.JSON.encode(albums));
+          }
+        };
+      },
 
-  user: function(ui) {
-    var include = matchers.include;
-    return {
-      shouldSee: function(album) {
-        expect(ui.find('.album').text()).to(include, album);
+      runApplication: function() {
+        albumlist.application(ui);
+      },
+
+      user: function() {
+        return {
+          shouldSee: function(album) {
+            expect(ui.find('.album').text()).to(include, album);
+          }
+        };
       }
-    };
+    }
+  };
+
+  function moduleUtil(module, util) {
+    return findModule(module).utilities[util];
   }
-}});
 
-function findModule(name) {
-  var module = null;
-  JSpec.modules.forEach(function(m) {
-    if (m.name == name) module = m;
-  });
-  return module;
-}
+  function findModule(name) {
+    var module = null;
+    JSpec.modules.forEach(function(m) {
+      if (m.name == name) module = m;
+    });
+    return module;
+  }
+})());
