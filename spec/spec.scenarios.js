@@ -13,8 +13,11 @@ JSpec.describe('End-to-end scenarios', function() {
 
 JSpec.include({ utilities: {
   server: function() {
+    var mockRequest = findModule('Mock XHR').utilities.mockRequest;
     return {
-      has: function() {}
+      has: function(albums) {
+        mockRequest().and_return(JSpec.JSON.encode(albums));
+      }
     };
   },
 
@@ -27,3 +30,11 @@ JSpec.include({ utilities: {
     };
   }
 }});
+
+function findModule(name) {
+  var module = null;
+  JSpec.modules.forEach(function(m) {
+    if (m.name == name) module = m;
+  });
+  return module;
+}
