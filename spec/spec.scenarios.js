@@ -1,12 +1,21 @@
+
 JSpec.describe('End-to-end scenarios', function() {
   it('shows the list of albums', function() {
-    var albums = ['The Tipping Point',
-                  'Black on Both Sides',
-                  'Heartattack and Vine'];
+    // given
+    var albums = [{title: 'The Tipping Point', artist: 'The Roots'},
+                  {title: 'Black on Both Sides', artist: 'Mos Def'},
+                  {title: 'Heartattack and Vine', artist: 'Tom Waites'}];
     server().has(albums);
+    // when
     runApplication();
-    albums.forEach(function(album) {
-      user().shouldSee(album);
+    // then
+    user().shouldSee(albums);
+    // when
+    user().clicksOn('The Tipping Point');
+    // then
+    user().shouldSeeDetails({
+      title: 'The Tipping Point',
+      artist: 'The Roots'
     });
   });
 });
@@ -14,7 +23,7 @@ JSpec.describe('End-to-end scenarios', function() {
 JSpec.include((function () {
   var sandbox = moduleUtil('jQuery', 'sandbox');
   var mockRequest = moduleUtil('Mock XHR', 'mockRequest');
-  var include = matchers.include;
+  var m = matchers;
   var ui;
   return {
     name: 'ScenarioSupport',
@@ -36,8 +45,16 @@ JSpec.include((function () {
 
       user: function() {
         return {
-          shouldSee: function(album) {
-            expect(ui.find('.album').text()).to(include, album);
+          clicksOn: function(album) {
+            ui.find('.album').click();
+          },
+          shouldSee: function(albums) {
+            ui.find('.album').each(function(i, album) {
+              expect(jQuery(album).text()).to(m.equal, albums[i].title);
+            });
+          },
+          shouldSeeDetails: function(details) {
+            expect(ui.find('.title').text()).to(m.equal, details.title);
           }
         };
       }
